@@ -20,7 +20,7 @@ Vercel で公開する静的サイトです（HTML / CSS / 少量の JavaScript 
 
 1. https://formspree.io でアカウントを作成し、「New Form」でフォームを作る（通知先メールアドレスを指定）。
 2. 発行されたURL（例：`https://formspree.io/f/abcdwxyz`）をコピー。
-3. `index.html` 内の `https://formspree.io/f/YOUR_FORM_ID` を、そのURLに置き換えて保存・コミット。
+3. `index.html` のフォームの `action` にそのURLを設定（設定済み：`https://formspree.io/f/xvkaovew`）。
 
 - 送信はページ遷移なしで行われ、完了・失敗のメッセージがフォーム内に表示されます。
 - メール件名は「【ホームページ】お問い合わせがありました」です（`_subject` で変更可）。
