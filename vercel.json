@@ -8,7 +8,17 @@
       "permanent": true
     },
     {
+      "source": "/company/",
+      "destination": "/#company",
+      "permanent": true
+    },
+    {
       "source": "/about",
+      "destination": "/#service",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
       "destination": "/#service",
       "permanent": true
     },
@@ -18,7 +28,27 @@
       "permanent": true
     },
     {
+      "source": "/contact/",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
       "source": "/column",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/column/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
       "destination": "/news/",
       "permanent": true
     },
@@ -28,7 +58,27 @@
       "permanent": true
     },
     {
+      "source": "/%E3%81%93%E3%81%AE%E5%BA%A6%E3%81%AE%E7%86%8A%E6%9C%AC%E5%9C%B0%E9%9C%87%E3%81%AB%E3%82%88%E3%82%8A%E8%A2%AB%E7%81%BD%E3%81%95%E3%82%8C%E3%81%9F%E7%9A%86%E3%81%95%E3%81%BE%E3%81%B8/",
+      "destination": "/news5/",
+      "permanent": true
+    },
+    {
       "source": "/%e3%81%93%e3%81%ae%e5%ba%a6%e3%81%ae%e7%86%8a%e6%9c%ac%e5%9c%b0%e9%9c%87%e3%81%ab%e3%82%88%e3%82%8a%e8%a2%ab%e7%81%bd%e3%81%95%e3%82%8c%e3%81%9f%e7%9a%86%e3%81%95%e3%81%be%e3%81%b8",
+      "destination": "/news5/",
+      "permanent": true
+    },
+    {
+      "source": "/%e3%81%93%e3%81%ae%e5%ba%a6%e3%81%ae%e7%86%8a%e6%9c%ac%e5%9c%b0%e9%9c%87%e3%81%ab%e3%82%88%e3%82%8a%e8%a2%ab%e7%81%bd%e3%81%95%e3%82%8c%e3%81%9f%e7%9a%86%e3%81%95%e3%81%be%e3%81%b8/",
+      "destination": "/news5/",
+      "permanent": true
+    },
+    {
+      "source": "/この度の熊本地震により被災された皆さまへ",
+      "destination": "/news5/",
+      "permanent": true
+    },
+    {
+      "source": "/この度の熊本地震により被災された皆さまへ/",
       "destination": "/news5/",
       "permanent": true
     },
@@ -36,11 +86,6 @@
       "source": "/wp-admin/:path*",
       "destination": "/",
       "permanent": false
-    },
-    {
-      "source": "/feed",
-      "destination": "/news/",
-      "permanent": true
     }
   ],
   "headers": [
