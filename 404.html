@@ -159,26 +159,21 @@ img{max-width:100%}
     m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
   }
 
-  var sec=document.getElementById('numbers');
-  if(sec){
+  var blocks=document.querySelectorAll('#numbers [data-anim]');
+  if(blocks.length){
     var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var cs=sec.querySelectorAll('[data-count]'),rs=sec.querySelectorAll('[data-ring]'),bs=sec.querySelectorAll('[data-bar]'),ds=sec.querySelectorAll('[data-donut]');
-    function paint(e){
-      cs.forEach(function(el){el.textContent=(parseFloat(el.dataset.count)*e).toFixed(parseInt(el.dataset.dec,10));});
-      rs.forEach(function(el){var c=parseFloat(el.dataset.c);el.style.strokeDashoffset=(c*(1-parseFloat(el.dataset.ring)/100*e)).toFixed(2);});
-      bs.forEach(function(el){el.style.width=(parseFloat(el.dataset.bar)*e).toFixed(1)+'%';});
-      ds.forEach(function(el){var c=parseFloat(el.dataset.c);el.setAttribute('stroke-dasharray',(c*parseFloat(el.dataset.donut)/100*e).toFixed(2)+' '+c);});
+    function paint(root,e){
+      root.querySelectorAll('[data-count]').forEach(function(el){el.textContent=(parseFloat(el.dataset.count)*e).toFixed(parseInt(el.dataset.dec,10));});
+      root.querySelectorAll('[data-ring]').forEach(function(el){var c=parseFloat(el.dataset.c);el.style.strokeDashoffset=(c*(1-parseFloat(el.dataset.ring)/100*e)).toFixed(2);});
+      root.querySelectorAll('[data-bar]').forEach(function(el){el.style.width=(parseFloat(el.dataset.bar)*e).toFixed(1)+'%';});
+      root.querySelectorAll('[data-donut]').forEach(function(el){var c=parseFloat(el.dataset.c);el.setAttribute('stroke-dasharray',(c*parseFloat(el.dataset.donut)/100*e).toFixed(2)+' '+c);});
     }
+    function run(root){var st=null;function step(ts){if(st===null)st=ts;var t=Math.min(1,(ts-st)/1600);paint(root,1-Math.pow(1-t,3));if(t<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
     if(!reduce&&'IntersectionObserver' in window){
-      paint(0);
       var io=new IntersectionObserver(function(es){
-        if(!es.some(function(x){return x.isIntersecting;}))return;
-        io.disconnect();
-        var st=null;
-        function step(ts){if(st===null)st=ts;var t=Math.min(1,(ts-st)/1800);paint(1-Math.pow(1-t,3));if(t<1)requestAnimationFrame(step);}
-        requestAnimationFrame(step);
-      },{threshold:0.2});
-      io.observe(sec);
+        es.forEach(function(en){if(!en.isIntersecting)return;io.unobserve(en.target);run(en.target);});
+      },{threshold:0.35});
+      blocks.forEach(function(bl){paint(bl,0);io.observe(bl);});
     }
   }
   var f=document.getElementById('tg-contact-form');
