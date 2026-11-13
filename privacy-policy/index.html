@@ -40,6 +40,13 @@ a{color:#2F6420}a:hover{color:#123524}
 .tg-dl{grid-template-columns:84px minmax(0,1fr) !important;padding:8px 20px 16px !important;font-size:14px !important}
 .tg-form{padding:28px 20px !important}
 .tg-footer{padding-bottom:120px !important}
+.tg-tl{grid-template-columns:minmax(0,1fr) !important}
+.tg-tl-end{align-items:flex-start !important;text-align:left !important}
+.tg-cnt{gap:8px !important}
+.tg-cnt > div{padding:20px 6px !important;border-radius:20px !important}
+.tg-cnt .tg-cn{font-size:30px !important}
+.tg-cnt p{font-size:12px !important}
+.tg-cnt > div > span:first-child{width:40px !important;height:40px !important}
 .tg-hero-copy h1{font-size:34px !important}
 .tg-twocol{grid-template-columns:minmax(0,1fr) !important}
 .tg-sec{padding-top:72px !important;padding-bottom:72px !important}
@@ -165,6 +172,29 @@ img{max-width:100%}
     function set(o){m.hidden=!o;b.classList.toggle('is-open',o);b.setAttribute('aria-expanded',String(o));}
     b.addEventListener('click',function(){set(m.hidden);});
     m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  }
+
+  var sec=document.getElementById('numbers');
+  if(sec){
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var cs=sec.querySelectorAll('[data-count]'),rs=sec.querySelectorAll('[data-ring]'),bs=sec.querySelectorAll('[data-bar]'),ds=sec.querySelectorAll('[data-donut]');
+    function paint(e){
+      cs.forEach(function(el){el.textContent=(parseFloat(el.dataset.count)*e).toFixed(parseInt(el.dataset.dec,10));});
+      rs.forEach(function(el){var c=parseFloat(el.dataset.c);el.style.strokeDashoffset=(c*(1-parseFloat(el.dataset.ring)/100*e)).toFixed(2);});
+      bs.forEach(function(el){el.style.width=(parseFloat(el.dataset.bar)*e).toFixed(1)+'%';});
+      ds.forEach(function(el){var c=parseFloat(el.dataset.c);el.setAttribute('stroke-dasharray',(c*parseFloat(el.dataset.donut)/100*e).toFixed(2)+' '+c);});
+    }
+    if(!reduce&&'IntersectionObserver' in window){
+      paint(0);
+      var io=new IntersectionObserver(function(es){
+        if(!es.some(function(x){return x.isIntersecting;}))return;
+        io.disconnect();
+        var st=null;
+        function step(ts){if(st===null)st=ts;var t=Math.min(1,(ts-st)/1800);paint(1-Math.pow(1-t,3));if(t<1)requestAnimationFrame(step);}
+        requestAnimationFrame(step);
+      },{threshold:0.2});
+      io.observe(sec);
+    }
   }
   var f=document.getElementById('tg-contact-form');
   if(f){
