@@ -43,6 +43,10 @@ a{color:#2F6420}a:hover{color:#123524}
 .tg-tl{grid-template-columns:minmax(0,1fr) !important}
 .tg-tl-end{align-items:flex-start !important;text-align:left !important}
 .tg-cnt{gap:8px !important}
+.tg-pstats{grid-template-columns:minmax(0,1fr) !important}
+.tg-pstats > div{flex-direction:row !important;flex-wrap:wrap;align-items:baseline;justify-content:space-between;column-gap:12px !important}
+.tg-portal{padding:36px 20px !important;border-radius:24px !important}
+.tg-portal .tg-twocol > a{order:-1}
 .tg-cnt > div{padding:20px 6px !important;border-radius:20px !important}
 .tg-cnt .tg-cn{font-size:30px !important}
 .tg-cnt p{font-size:12px !important}
@@ -106,6 +110,7 @@ img{max-width:100%}
 <a href="/news/">お知らせ</a>
 <a href="#company">会社案内</a>
 <a href="/recruit/">採用情報</a>
+<a href="https://tetsunagu-home.jp/" target="_blank" rel="noopener">老人ホームナビで施設を探す ↗</a>
 <a href="#contact" style="margin-top: 16px; border: none; background: #3E7B27; color: #ffffff; text-align: center; border-radius: 999px">無料で相談する</a>
 </nav>
 </header>
@@ -335,6 +340,46 @@ img{max-width:100%}
 </div>
 </section>
 
+<!-- ===== PORTAL ===== -->
+<section id="portal" class="tg-sec" style="padding: 0 24px 112px">
+<div style="max-width: 1200px; margin: 0 auto; background: #F4F8EC; border-radius: 32px; padding: 56px 48px" class="tg-portal">
+<div class="tg-twocol" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 700; color: #3E7B27; letter-spacing: 0.25em; font-size: 14px">PORTAL SITE</p>
+<h2 class="tg-h2" style="margin: 0; font-family: 'Zen Maru Gothic', sans-serif; font-weight: 900; font-size: 32px; color: #123524; line-height: 1.5">熊本の老人ホームを、<br>ご自身でも探せます。</h2>
+<p style="margin: 0; font-family: 'Zen Maru Gothic', sans-serif; font-weight: 700; font-size: 20px; color: #3E7B27">テツナグ 熊本老人ホームナビ</p>
+<p style="margin: 0; font-size: 15px">熊本県内の老人ホーム・介護施設を、エリア・施設の種類・月額費用から検索できるポータルサイトを運営しています。気になる施設が見つかったら、そのまま地元の相談員に無料でご相談いただけます。</p>
+<div class="tg-pstats" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 16px 18px; background: #ffffff; border-radius: 16px">
+<span style="font-size: 13px; font-weight: 700; color: #4A554A">掲載施設数</span>
+<span style="display: flex; align-items: baseline; gap: 4px"><span style="font-family: 'Quicksand', sans-serif; font-weight: 700; color: #3E7B27; font-size: 32px; line-height: 1.1">1,037</span><span style="font-weight: 700; color: #123524">件</span></span>
+<span style="font-size: 12px; color: #4A554A">2026年11月時点</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 16px 18px; background: #ffffff; border-radius: 16px">
+<span style="font-size: 13px; font-weight: 700; color: #4A554A">施設の種類</span>
+<span style="display: flex; align-items: baseline; gap: 4px"><span style="font-family: 'Quicksand', sans-serif; font-weight: 700; color: #3E7B27; font-size: 32px; line-height: 1.1">7</span><span style="font-weight: 700; color: #123524">種類</span></span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 16px 18px; background: #ffffff; border-radius: 16px">
+<span style="font-size: 13px; font-weight: 700; color: #4A554A">対応エリア</span>
+<span style="display: flex; align-items: baseline; gap: 4px"><span style="font-family: 'Quicksand', sans-serif; font-weight: 700; color: #3E7B27; font-size: 32px; line-height: 1.1">熊本県</span><span style="font-weight: 700; color: #123524">全域</span></span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px">
+<a href="https://tetsunagu-home.jp/search/" target="_blank" rel="noopener" style="background: #3E7B27; color: #ffffff; text-decoration: none; padding: 16px 30px; border-radius: 999px; font-weight: 700">施設を探す ↗</a>
+<a href="https://tetsunagu-home.jp/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; text-decoration: none; padding: 16px 30px; border-radius: 999px; font-weight: 700; border: 2px solid #85A947">サイトを見る ↗</a>
+</div>
+</div>
+<a href="https://tetsunagu-home.jp/" target="_blank" rel="noopener" aria-label="テツナグ 熊本老人ホームナビを開く" style="display: block; text-decoration: none; background: #ffffff; border-radius: 18px; overflow: hidden; box-shadow: 0 16px 40px rgba(18,53,36,0.14)">
+<span style="display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: #E9F0DC"><span style="width: 10px; height: 10px; border-radius: 50%; background: #ffffff"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #ffffff"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #ffffff"></span><span style="margin-left: 8px; font-size: 12px; color: #4A554A; font-family: 'Quicksand', sans-serif">tetsunagu-home.jp</span></span>
+<img src="/assets/img/portal.jpg" alt="テツナグ 熊本老人ホームナビのトップページ" style="width: 100%; height: auto; display: block">
+</a>
+</div>
+<div style="margin-top: 40px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px"><span style="font-weight: 700; color: #123524; min-width: 112px">エリアから探す</span><a href="https://tetsunagu-home.jp/area/kumamoto-chuo/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">中央区</a><a href="https://tetsunagu-home.jp/area/kumamoto-kita/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">北区</a><a href="https://tetsunagu-home.jp/area/kumamoto-minami/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">南区</a><a href="https://tetsunagu-home.jp/area/kumamoto-higashi/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">東区</a><a href="https://tetsunagu-home.jp/area/kumamoto-nishi/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">西区</a><a href="https://tetsunagu-home.jp/area/kenhoku/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">県北</a><a href="https://tetsunagu-home.jp/area/kenou/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">県央</a><a href="https://tetsunagu-home.jp/area/kennan/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">県南</a><a href="https://tetsunagu-home.jp/area/amakusa-area/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">天草</a></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px"><span style="font-weight: 700; color: #123524; min-width: 112px">種類から探す</span><a href="https://tetsunagu-home.jp/type/kaigo/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">介護付き有料老人ホーム</a><a href="https://tetsunagu-home.jp/type/jutaku/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">住宅型有料老人ホーム</a><a href="https://tetsunagu-home.jp/type/sakoju/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">サービス付き高齢者向け住宅</a><a href="https://tetsunagu-home.jp/type/grouphome/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">グループホーム</a><a href="https://tetsunagu-home.jp/type/kourei/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">高齢者住宅（賃貸）</a><a href="https://tetsunagu-home.jp/type/tokuyou/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">特別養護老人ホーム</a><a href="https://tetsunagu-home.jp/type/roken/" target="_blank" rel="noopener" style="background: #ffffff; color: #2F6420; border: 1px solid #C8D4B8; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px">介護老人保健施設</a></div>
+</div>
+</div>
+</section>
+
 <!-- ===== FLOW ===== -->
 <section id="flow" class="tg-sec" style="padding: 112px 24px; background: #F4F8EC">
 <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
@@ -419,7 +464,7 @@ img{max-width:100%}
 <dt style="padding: 16px 0; border-bottom: 1px solid #E0E8D4; font-weight: 700; color: #2F6420">資本金</dt><dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #E0E8D4">500万円</dd>
 <dt style="padding: 16px 0; border-bottom: 1px solid #E0E8D4; font-weight: 700; color: #2F6420">所在地</dt><dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #E0E8D4">〒862-0976<br>熊本県熊本市中央区九品寺1-16-8 シティライフ九品寺205</dd>
 <dt style="padding: 16px 0; border-bottom: 1px solid #E0E8D4; font-weight: 700; color: #2F6420">TEL</dt><dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #E0E8D4">096-288-2115（受付時間 9:00〜19:00）</dd>
-<dt style="padding: 16px 0; border-bottom: 1px solid #E0E8D4; font-weight: 700; color: #2F6420">事業内容</dt><dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #E0E8D4">老人ホーム紹介事業<br>人材紹介事業（看護師・介護士・保育士をはじめとするエッセンシャルワーカーの有料職業紹介）</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid #E0E8D4; font-weight: 700; color: #2F6420">事業内容</dt><dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #E0E8D4">老人ホーム紹介事業<br>老人ホーム検索サイト「テツナグ 熊本老人ホームナビ」の運営<br>人材紹介事業（看護師・介護士・保育士をはじめとするエッセンシャルワーカーの有料職業紹介）</dd>
 <dt style="padding: 16px 0; border-bottom: 1px solid #E0E8D4; font-weight: 700; color: #2F6420">許可・届出</dt><dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #E0E8D4">有料職業紹介事業 許可番号 43-ユ-300300<br>高齢者住まい事業者団体連合会「紹介事業 届出公表制度」届出番号 24-0863</dd>
 <dt style="padding: 16px 0; border-bottom: 1px solid #E0E8D4; font-weight: 700; color: #2F6420">取引銀行</dt><dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #E0E8D4">三井住友銀行／熊本第一信用金庫</dd>
 </dl>
@@ -486,6 +531,7 @@ img{max-width:100%}
 <a href="/recruit/" style="color: #DCE8C6; text-decoration: none">採用情報</a>
 <a href="#contact" style="color: #DCE8C6; text-decoration: none">お問い合わせ</a>
 <a href="/privacy-policy/" style="color: #DCE8C6; text-decoration: none">プライバシーポリシー</a>
+<a href="https://tetsunagu-home.jp/" target="_blank" rel="noopener" style="color: #DCE8C6; text-decoration: none">熊本老人ホームナビ ↗</a>
 </nav>
 </div>
 <p style="margin: 0; padding-top: 24px; border-top: 1px solid rgba(220,232,198,0.25); font-size: 12px; text-align: center">© 2026 Tetsunagu Co., Ltd.</p>
